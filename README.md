@@ -24,3 +24,11 @@ This project uses financial market data to analyze asset price behavior and port
 ## Installation
 
 Clone the repository:
+
+## Future Improvements
+
+Planned upgrades for this project include:
+
+- Efficient Frontier (Markowitz portfolio optimization)
+- Monte Carlo simulation for stock price forecasting
+- Portfolio Sharpe Ratio optimization
