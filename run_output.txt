@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/Users/swayamshah/BlackSchols-Finance-Project/.venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Close'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/swayamshah/BlackSchols-Finance-Project/stock_analysis_clean.py", line 228, in <module>
+    main()
+    ~~~~^^
+  File "/Users/swayamshah/BlackSchols-Finance-Project/stock_analysis_clean.py", line 189, in main
+    prices = download_data(TICKERS)
+  File "/Users/swayamshah/BlackSchols-Finance-Project/stock_analysis_clean.py", line 32, in download_data
+    prices = raw["Close"].copy()
+             ~~~^^^^^^^^^
+  File "/Users/swayamshah/BlackSchols-Finance-Project/.venv/lib/python3.13/site-packages/pandas/core/frame.py", line 4377, in __getitem__
+    return self._getitem_multilevel(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/swayamshah/BlackSchols-Finance-Project/.venv/lib/python3.13/site-packages/pandas/core/frame.py", line 4435, in _getitem_multilevel
+    loc = self.columns.get_loc(key)
+  File "/Users/swayamshah/BlackSchols-Finance-Project/.venv/lib/python3.13/site-packages/pandas/core/indexes/multi.py", line 3523, in get_loc
+    loc = self._get_level_indexer(key, level=0)
+  File "/Users/swayamshah/BlackSchols-Finance-Project/.venv/lib/python3.13/site-packages/pandas/core/indexes/multi.py", line 3885, in _get_level_indexer
+    idx = self._get_loc_single_level_index(level_index, key)
+  File "/Users/swayamshah/BlackSchols-Finance-Project/.venv/lib/python3.13/site-packages/pandas/core/indexes/multi.py", line 3458, in _get_loc_single_level_index
+    return level_index.get_loc(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/swayamshah/BlackSchols-Finance-Project/.venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Close'
