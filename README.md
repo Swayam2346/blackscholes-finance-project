@@ -25,6 +25,16 @@ This project uses financial market data to analyze asset price behavior and port
 
 Clone the repository:
 
+git clone https://github.com/Swayam2346/blackscholes-finance-project.git
+
+Navigate to the project folder:
+
+cd blackscholes-finance-project
+
+Install required libraries:
+
+pip install pandas numpy matplotlib yfinance
+
 ## Future Improvements
 
 Planned upgrades for this project include:
