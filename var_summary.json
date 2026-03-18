@@ -1,0 +1,21 @@
+{
+  "0.05": {
+    "VaR": 0.17183722520496159,
+    "CVaR": 0.2521432022744213,
+    "threshold_return": -0.17183722520496159,
+    "num_tail_sims": 150
+  },
+  "0.01": {
+    "VaR": 0.2981155485795297,
+    "CVaR": 0.36199937401038207,
+    "threshold_return": -0.2981155485795297,
+    "num_tail_sims": 30
+  },
+  "summary": {
+    "initial_value": 10000.0,
+    "terminal_mean": 12938.080579886655,
+    "terminal_median": 12545.462184281645,
+    "terminal_std": 3287.3368928163877,
+    "num_simulations": 3000
+  }
+}
