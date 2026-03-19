@@ -1,44 +1,54 @@
-# Black-Scholes Finance Analysis Toolkit
+# BlackScholes-Finance-Project
 
-A Python-based financial analysis toolkit that retrieves historical stock market data and performs portfolio analytics.
+A Python portfolio analytics project that combines market data ingestion, portfolio risk/return analysis, efficient frontier optimization, Monte Carlo simulation, and Value-at-Risk (VaR) estimation.
 
-This project uses financial market data to analyze asset price behavior and portfolio risk metrics.
+## What it does
 
-## Features
+- Downloads historical price data from Yahoo Finance
+- Cleans MultiIndex / flat DataFrame outputs robustly
+- Calculates daily returns, annualized return, volatility, and Sharpe ratio
+- Builds an efficient frontier using constrained optimization
+- Runs Monte Carlo portfolio simulations
+- Estimates VaR and CVaR from simulated terminal portfolio values
+- Saves visual outputs as PNG files for portfolio presentation
 
-- Download historical stock data using Yahoo Finance
-- Handle MultiIndex financial datasets using pandas
-- Calculate asset returns
-- Analyze portfolio risk metrics
-- Visualize asset price trends
+## Main outputs
 
-## Technologies Used
+- `efficient_frontier.png`
+- `monte_carlo.png`
+- `terminal_dist.png`
+- `var_summary.json`
+
+## Files
+
+- `stock_analysis.py` — main analysis script
+- `requirements.txt` — Python dependencies
+- `efficient_frontier.png` — efficient frontier chart
+- `terminal_dist.png` — terminal value distribution with VaR lines
+- `var_summary.json` — VaR / CVaR summary
+
+## Technologies used
 
 - Python
-- Pandas
-- NumPy
-- Matplotlib
+- pandas
+- numpy
 - yfinance
-- Git / GitHub
+- scipy
+- matplotlib
 
-## Installation
+## How to run
 
-Clone the repository:
+```bash
+pip install -r requirements.txt
+python stock_analysis.py
 
-git clone https://github.com/Swayam2346/blackscholes-finance-project.git
+## Visual Results
 
-Navigate to the project folder:
+### Efficient Frontier
+![Efficient Frontier](efficient_frontier.png)
 
-cd blackscholes-finance-project
+### Monte Carlo Simulation
+![Monte Carlo](monte_carlo.png)
 
-Install required libraries:
-
-pip install pandas numpy matplotlib yfinance
-
-## Future Improvements
-
-Planned upgrades for this project include:
-
-- Efficient Frontier (Markowitz portfolio optimization)
-- Monte Carlo simulation for stock price forecasting
-- Portfolio Sharpe Ratio optimization
+### Terminal Distribution with VaR
+![Terminal Distribution](terminal_dist.png)
