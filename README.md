@@ -1,3 +1,13 @@
+## Project Overview
+
+This project builds a complete portfolio analytics pipeline using Python, combining financial theory (modern portfolio theory, risk modeling) with practical implementation.
+
+It includes:
+- Portfolio return and risk calculation
+- Efficient frontier optimization
+- Monte Carlo simulation of portfolio value
+- Value-at-Risk (VaR) and Expected Shortfall (CVaR)
+
 # BlackScholes-Finance-Project
 
 A Python portfolio analytics project that combines market data ingestion, portfolio risk/return analysis, efficient frontier optimization, Monte Carlo simulation, and Value-at-Risk (VaR) estimation.
@@ -41,6 +51,7 @@ A Python portfolio analytics project that combines market data ingestion, portfo
 ```bash
 pip install -r requirements.txt
 python stock_analysis.py
+```
 
 ## Visual Results
 
