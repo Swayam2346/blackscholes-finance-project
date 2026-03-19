@@ -467,6 +467,19 @@ if __name__ == "__main__":
             # require 'prices' and 'weights' variables exist (they are created earlier in main)
             sim_results = monte_carlo_simulation(prices, weights, num_simulations=3000, num_days=252)
 
+            # Save Monte Carlo visualization directly here so the file is always created.
+            import matplotlib.pyplot as plt
+            plt.figure(figsize=(10, 6))
+            plt.plot(sim_results, alpha=0.08)
+            plt.title("Monte Carlo Simulation of Portfolio Value")
+            plt.xlabel("Days")
+            plt.ylabel("Portfolio Value")
+            plt.grid(True)
+            plt.tight_layout()
+            plt.savefig("monte_carlo.png", dpi=150)
+            plt.close()
+            print("Monte Carlo plot saved to: monte_carlo.png")
+
         # compute VaR / CVaR using terminal values
         var_res = compute_var_from_simulation(sim_results, initial_value=10000, confidence_levels=(0.05, 0.01))
         # pretty print
